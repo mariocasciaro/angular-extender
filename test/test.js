@@ -8,14 +8,14 @@ describe('extend', function() {
   it('should extend module declaration with no dependencies', function() {
     var src = "angular.module('moduleName');";
     var res = angularExtend(src, {moduleName: ['test']});
-    expect(res).to.be.equal("angular.module('moduleName', [\"test\"]);");
+    expect(res.out).to.be.equal("angular.module('moduleName', [\"test\"]);");
   });
 
 
   it('should extend module declaration with existing dependencies', function() {
     var src = "angular.module('moduleName', ['test']);";
     var res = angularExtend(src, {moduleName: ['test1']});
-    expect(res).to.be.equal("angular.module('moduleName', [\"test\",\"test1\"]);");
+    expect(res.out).to.be.equal("angular.module('moduleName', [\"test\",\"test1\"]);");
   });
 
 
@@ -26,6 +26,7 @@ describe('extend', function() {
       mod2: ['test3']
     });
     var expected = fs.readFileSync('test/expected/multiple.js', 'utf-8');
-    expect(res).to.be.equal(expected);
+    expect(res.out).to.be.equal(expected);
+    expect(res.changed).to.be.true;
   });
 });
