@@ -38,7 +38,7 @@ res.out will be:
 
 angular.module('moduleName', ['aModule', "aPlugin"]);
 
-res.changed will tell if any extension was applied at all.
+res.changed is a boolean and will tell if any extension was applied at all.
 */
 ```
 
