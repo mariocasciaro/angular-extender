@@ -52,6 +52,13 @@ angular.module(<string>, [<strings>]);
 ```
 Using variables or functions to define the module name, will fail.
 
+## Contributors
+
+* [Mario Casciaro](https://github.com/mariocasciaro) - Creator/Maitainer - Twitter [@mariocasciaro](https://twitter.com/mariocasciaro)
+
+Thanks to [olov](https://github.com/olov) and his project [ng-annotate](https://github.com/olov/ng-annotate) for the 
+inspiration he gave me to build this little tool.
+
 -----
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mariocasciaro/angular-extender/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
