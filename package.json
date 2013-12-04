@@ -1,0 +1,36 @@
+{
+  "name": "angular-extender",
+  "description": "Extend AngularJS applications by injecting module dependencies at build time",
+  "version": "0.1.0",
+  "author": {
+    "name": "Mario Casciaro"
+  },
+  "homepage": "https://github.com/mariocasciaro/angular-extender",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mariocasciaro/angular-extender.git"
+  },
+  "dependencies": {
+    "ast-traverse": "~0.1.1",
+    "alter": "~0.2.0",
+    "simple-is": "~0.2.0",
+    "esprima": "~1.0.4"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "chai": "~1.8.0",
+    "mocha-lcov-reporter": "~0.0.1",
+    "coveralls": "~2.3.0",
+    "istanbul": "~0.1.44"
+  },
+  "scripts": {
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha test/*.js --report html -- -R spec"
+  },
+  "keywords": [
+    "angularjs",
+    "angular",
+    "extensibility",
+    "plugin"
+  ],
+  "license": "MIT"
+}
