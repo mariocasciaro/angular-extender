@@ -34,9 +34,11 @@ var angularExtend = require('angular-extend');
 var src = "angular.module('moduleName', ['aModule']);";
 var res = angularExtend(src, {moduleName: ['aPlugin']});
 /*
-res will be:
+res.out will be:
 
 angular.module('moduleName', ['aModule', "aPlugin"]);
+
+res.changed will tell if any extension was applied at all.
 */
 ```
 

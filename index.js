@@ -57,5 +57,9 @@ module.exports = function angularExtender(src, moduleExtensions) {
     matchAndExtendModuleDefinition(node,  moduleExtensions, replaceFragments);
   }});
 
-  return alter(src, replaceFragments);
+  var res = alter(src, replaceFragments);
+  return {
+    out: res,
+    changed: (replaceFragments.length !== 0)
+  }
 };
