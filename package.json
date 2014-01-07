@@ -1,7 +1,7 @@
 {
   "name": "angular-extender",
   "description": "Extend AngularJS applications by injecting module dependencies at build time",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Mario Casciaro"
   },
