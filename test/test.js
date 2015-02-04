@@ -5,10 +5,10 @@ var expect = require('chai').expect,
 
 
 describe('extend', function() {
-  it('should extend module declaration with no dependencies', function() {
+  it('should NOT extend module declaration with no dependencies', function() {
     var src = "angular.module('moduleName');";
     var res = angularExtend(src, {moduleName: ['test']});
-    expect(res.out).to.be.equal("angular.module('moduleName', [\"test\"]);");
+    expect(res.out).to.be.equal("angular.module('moduleName');");
   });
 
 

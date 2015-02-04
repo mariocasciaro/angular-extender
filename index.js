@@ -25,14 +25,7 @@ function matchAndExtendModuleDefinition(node, modules, fragments) {
   }
   var moduleExtensions = modules[args[0].value];
 
-  if(args.length === 1) {
-    //we got only module name
-    fragments.push({
-      start: args[0].range[1],
-      end: node.range[1] - 1,
-      str: ", " + JSON.stringify(moduleExtensions)
-    });
-  } else if(args.length === 2 && args[1].type === "ArrayExpression") {
+  if(args.length === 2 && args[1].type === "ArrayExpression") {
     var modulesString = JSON.stringify(args[1].elements.map(function(elem) {
       return elem.name || elem.value;
     }).concat(moduleExtensions));

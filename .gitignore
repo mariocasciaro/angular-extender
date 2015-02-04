@@ -2,6 +2,7 @@ node_modules
 .c9revisions
 .settings
 .idea
+.DS_Store
 npm-debug.log
 generated
 coverage
